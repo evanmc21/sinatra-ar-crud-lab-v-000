@@ -39,6 +39,6 @@ class ApplicationController < Sinatra::Base
   patch '/posts/:id' do #finds the instance of the model to update using the id from params
     @post = Post.find(params[:id])
     @post.name = params[:name]
-    @post.content
+    @post.content = params[:content]
   end
 end
