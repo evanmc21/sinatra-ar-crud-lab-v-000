@@ -40,4 +40,5 @@ class ApplicationController < Sinatra::Base
     @post = Post.find(params[:id])
     @post.name = params[:name]
     @post.content
+  end
 end
