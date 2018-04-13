@@ -36,7 +36,7 @@ class ApplicationController < Sinatra::Base
     erb :edit
   end
 
-  patch '/posts/:id' do #finds the instance of the model to update using the id from params
+  patch '/posts/:id' do #finds the instance of the model to update using the id from params, update and save the instance
     @post = Post.find(params[:id])
     @post.name = params[:name]
     @post.content = params[:content]
