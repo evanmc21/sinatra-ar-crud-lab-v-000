@@ -42,4 +42,9 @@ class ApplicationController < Sinatra::Base
     @post.content = params[:content]
     @post.save
   end
+
+  delete '/posts/:id/delete' do
+    @post = Post.find(params[:id])
+    @post.destroy
+  end
 end
