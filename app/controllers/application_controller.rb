@@ -19,6 +19,9 @@ class ApplicationController < Sinatra::Base
   get '/models' do
     @posts = Post.all
 
+    erb :index
+  end
+
   post '/posts/:id' do
 
 end
